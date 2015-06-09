@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+	<nav>
+		<a href="#" class="click-form"><span class="glyphicon glyphicon-plus icon-border"></span></a>
+		<div class="dropdown-form">
+			<form id="photoSubmitForm">
+				<div>
+					<input type="text" id="photoUpload" placeholder="Image URL">
+				</div>
+				<div>
+					<input type="text" id="photoComment"placeholder="Comment">
+				</div>
+				<button id="addImage"><span id="photo-icon" class="glyphicon glyphicon-picture"></span>Add Image</button>
+			</form>
+				<button id="cancel">Cancel</button>
+		</div>
+	</nav>
+	<section id="my-photos"></section>
+
+	<script type="text/template" id="photoTemplate">
+		<div class="photo-container">
+			<%="<img src='" +photo+"' class='photos'>" %>
+			<hr><%= comment %>
+		</div>
+	</script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+	<script type="text/javascript" src="bower_components/backbone/backbone-min.js"></script>
+	<script type="text/javascript" src="scripts/models/TodoModel.js"></script>
+	<script type="text/javascript" src="scripts/collections/TodoCollection.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
