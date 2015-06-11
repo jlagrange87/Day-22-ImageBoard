@@ -21,7 +21,7 @@ $(document).ready(function(){
 		if(newPhoto.isValid()){
 			PhotoList.add(newPhoto);
 			console.log(PhotoList);
-			newPhoto.save();
+			// newPhoto.save();
 			$(".dropdown-form").slideUp("slow");
 		}
 		else {
